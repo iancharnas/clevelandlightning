@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 cd ~/BlitzScraper
 source env/bin/activate >>cron.log 2>&1
