@@ -1,0 +1,5 @@
+/bin/sh: 1: source: not found
+Traceback (most recent call last):
+  File "mapBlitzortungLightningStrikes.py", line 6, in <module>
+    from geopy import distance
+ModuleNotFoundError: No module named 'geopy'
