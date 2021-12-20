@@ -11,8 +11,8 @@ import glob
 cleveland = [-81.6944, 41.4993] 
 australia = [135.7637, -15.1674]
 
-target_latitude = australia[1]
-target_longitude = australia[0]
+target_latitude = cleveland[1]
+target_longitude = cleveland[0]
 target_radius_miles = 50
 
 
