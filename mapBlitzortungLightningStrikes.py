@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+#import cProfile
 import os
 import csv
 import json
@@ -30,7 +31,8 @@ def main():
                 # Pay close attention, geopy works in lat, long format
                 strike_coords = (latitude, longitude)
                 target_coords = (target_latitude, target_longitude)
-                if (distance.distance(strike_coords, target_coords).miles <= target_radius_miles):
+                #distance.distance is more accurate but great_circle is 20x faster. let's use it.
+                if (distance.great_circle(strike_coords, target_coords).miles <= target_radius_miles):
                     strikes.append([longitude, latitude])
                     print(row)
                     
@@ -45,3 +47,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+#    cProfile.run('main()')
