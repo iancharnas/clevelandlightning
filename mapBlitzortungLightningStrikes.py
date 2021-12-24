@@ -14,7 +14,7 @@ australia = [135.7637, -15.1674]
 
 target_latitude = cleveland[1]
 target_longitude = cleveland[0]
-target_radius_miles = 50
+target_radius_miles = 100 
 
 
 ### Open all data files, produce a map marker json file for nearby lightning strikes
@@ -34,7 +34,7 @@ def main():
                 #distance.distance is more accurate but great_circle is 20x faster. let's use it.
                 if (distance.great_circle(strike_coords, target_coords).miles <= target_radius_miles):
                     strikes.append([longitude, latitude])
-                    print(row)
+                    #print(row)
                     
     # Save those strikes to our geojson file
     geojson = {

@@ -11,7 +11,7 @@ import requests
 def main():
     # Read the existing CSV file from today and yesterday (for edge cases) and remember the 
     # time of each strike, which is used as a unique identifier.
-    recorded_times = []
+    recorded_times = set() 
     today = date.today()
     yesterday = today - timedelta(days = 1)
     today_filepath = os.path.join("data", "%s.csv" % today.strftime('%Y-%m-%d'))
@@ -24,7 +24,7 @@ def main():
                 for row in csvreader:
                     [latitude, longitude, strike_time, server, mds, mcg, sta] = row
                     if strike_time not in recorded_times:
-                        recorded_times.append(strike_time)
+                        recorded_times.add(strike_time)
     
     # Get recent lightning strikes from Blitzortung server
     response = requests.get("https://map.blitzortung.org/GEOjson/getjson.php?f=s&n=00", headers={"Referer": "https://map.blitzortung.org/"})

@@ -15,3 +15,27 @@ To https://github.com/iancharnas/clevelandlightning.git
  create mode 100644 data/2021-12-21.csv
 To https://github.com/iancharnas/clevelandlightning.git
    9c55e7e..378e9cb  main -> main
+[main 8e02f9d] Update
+ 3 files changed, 75356 insertions(+)
+ create mode 100644 data/2021-12-22.csv
+To https://github.com/iancharnas/clevelandlightning.git
+   378e9cb..8e02f9d  main -> main
+Traceback (most recent call last):
+  File "scrapeBlitzortungLightningStrikes.py", line 67, in <module>
+    # print(countries)
+  File "scrapeBlitzortungLightningStrikes.py", line 26, in main
+    [latitude, longitude, strike_time, server, mds, mcg, sta] = row
+KeyboardInterrupt
+Reading existing strikes...
+Traceback (most recent call last):
+  File "scrapeBlitzortungLightningStrikes.py", line 70, in <module>
+    main()
+  File "scrapeBlitzortungLightningStrikes.py", line 27, in main
+    if strike_time not in recorded_times:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "scrapeBlitzortungLightningStrikes.py", line 67, in <module>
+    main()
+  File "scrapeBlitzortungLightningStrikes.py", line 27, in main
+    recorded_times.add(strike_time)
+AttributeError: 'dict' object has no attribute 'add'
