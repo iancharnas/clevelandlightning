@@ -39,3 +39,8 @@ Traceback (most recent call last):
   File "scrapeBlitzortungLightningStrikes.py", line 27, in main
     recorded_times.add(strike_time)
 AttributeError: 'dict' object has no attribute 'add'
+[main 805bd2c] Update
+ 5 files changed, 37330 insertions(+), 5 deletions(-)
+ create mode 100644 data/2021-12-23.csv
+To https://github.com/iancharnas/clevelandlightning.git
+   8e02f9d..805bd2c  main -> main
