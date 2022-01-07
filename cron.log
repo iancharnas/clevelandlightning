@@ -370,3 +370,8 @@ Traceback (most recent call last):
   File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='map.blitzortung.org', port=443): Max retries exceeded with url: /GEOjson/getjson.php?f=s&n=00 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xb5c690b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[main 14afe7d] Update
+ 3 files changed, 60434 insertions(+)
+ create mode 100644 data/2022-01-05.csv
+To https://github.com/iancharnas/clevelandlightning.git
+   486b1de..14afe7d  main -> main
