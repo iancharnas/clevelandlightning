@@ -430,3 +430,8 @@ To https://github.com/iancharnas/clevelandlightning.git
  create mode 100644 data/2022-01-16.csv
 To https://github.com/iancharnas/clevelandlightning.git
    eeb439d..f6033fa  main -> main
+[main b88909a] Update
+ 3 files changed, 79382 insertions(+)
+ create mode 100644 data/2022-01-17.csv
+To https://github.com/iancharnas/clevelandlightning.git
+   f6033fa..b88909a  main -> main
