@@ -1163,3 +1163,68 @@ To https://github.com/iancharnas/clevelandlightning.git
  create mode 100644 data/2022-04-18.csv
 To https://github.com/iancharnas/clevelandlightning.git
    d1bbad4..0be00c2  main -> main
+[main 6298ca1] Update
+ 4 files changed, 85250 insertions(+), 1 deletion(-)
+ create mode 100644 data/2022-04-19.csv
+To https://github.com/iancharnas/clevelandlightning.git
+   0be00c2..6298ca1  main -> main
+Traceback (most recent call last):
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1352, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/urllib3/connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/urllib3/util/retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/urllib3/connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/urllib3/connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1352, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 310, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 279, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "scrapeBlitzortungLightningStrikes.py", line 67, in <module>
+    main()
+  File "scrapeBlitzortungLightningStrikes.py", line 30, in main
+    response = requests.get("https://map.blitzortung.org/GEOjson/getjson.php?f=s&n=00", headers={"Referer": "https://map.blitzortung.org/"})
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
