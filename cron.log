@@ -1285,3 +1285,9 @@ To https://github.com/iancharnas/clevelandlightning.git
  create mode 100644 data/2022-04-30.csv
 To https://github.com/iancharnas/clevelandlightning.git
    9ff90e6..a507e7e  main -> main
+[main e15cc92] Update
+ 4 files changed, 280296 insertions(+), 1 deletion(-)
+ rewrite clevelandstrikes.json (62%)
+ create mode 100644 data/2022-05-01.csv
+To https://github.com/iancharnas/clevelandlightning.git
+   a507e7e..e15cc92  main -> main
