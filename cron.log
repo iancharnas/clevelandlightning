@@ -9819,3 +9819,22 @@ To https://github.com/iancharnas/clevelandlightning.git
  create mode 100644 data/2022-09-03.csv
 To https://github.com/iancharnas/clevelandlightning.git
    1f20e0d..58f7d75  main -> main
+[main 05a3cb9] Update
+ 4 files changed, 381498 insertions(+), 1 deletion(-)
+ create mode 100644 data/2022-09-04.csv
+To https://github.com/iancharnas/clevelandlightning.git
+   58f7d75..05a3cb9  main -> main
+Traceback (most recent call last):
+  File "scrapeBlitzortungLightningStrikes.py", line 67, in <module>
+    main()
+  File "scrapeBlitzortungLightningStrikes.py", line 31, in main
+    strikes = response.json()
+  File "/home/pi/BlitzScraper/env/lib/python3.7/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
